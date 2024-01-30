@@ -26,7 +26,89 @@ print_r($api->parseJobResults($id_job));
 ```txt
 Output example: 
 ...
- 
+Array
+(
+    [status] => parsed
+    [data] => Array
+        (
+            [predictions] => Array
+                (
+                    [0] => Array
+                        (
+                            [probability] => 0.9808
+                            [property] => Human Intestinal Absorption
+                            [value] => +
+                        )
+                    [1] => Array
+                        (
+                            [probability] => 0.5675
+                            [property] => Caco-2
+                            [value] => -
+                        )
+                    [2] => Array
+                        (
+                            [probability] => 0.7000
+                            [property] => Blood Brain Barrier
+                            [value] => -
+                        )
+                        ...
+                )
+            [properties] => Array
+                (
+                    [0] => Array
+                        (
+                            [property] => Molecular Weight
+                            [value] => 504.45
+                        )
+                    [1] => Array
+                        (
+                            [property] => AlogP
+                            [value] => 5.08
+                        )
+                    [2] => Array
+                        (
+                            [property] => H-Bond Acceptor
+                            [value] => 8
+                        )
+                    [3] => Array
+                        (
+                            [property] => H-Bond Donor
+                            [value] => 6
+                        )
+                    [4] => Array
+                        (
+                            [property] => Rotatable Bonds
+                            [value] => 0
+                        )
+                    [5] => Array
+                        (
+                            [property] => Applicability Domain
+                            [value] => Array
+                                (
+                                    [class] => warning
+                                    [content] => Warning
+                                )
+
+                        )
+                )
+            [regressions] => Array
+                (
+                    [0] => Array
+                        (
+                            [property] => Water solubility
+                            [unit] => logS
+                            [value] => -3.22
+                        )
+                    [1] => Array
+                        (
+                            [property] => Plasma protein binding
+                            [unit] => 100%
+                            [value] => 0.872
+                        )
+                )
+        )
+)
+
 ...
 ```
 
