@@ -1,40 +1,32 @@
-# Super-PRED Target Prediction Automaton
+# admetSAR Service
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/nekhbet/superpred-targetprediction.svg?style=flat-square)](https://packagist.org/packages/nekhbet/superpred-targetprediction)
-[![Total Downloads](https://img.shields.io/packagist/dt/nekhbet/superpred-targetprediction.svg?style=flat-square)](https://packagist.org/packages/nekhbet/superpred-targetprediction)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/nekhbet/admetsar-service.svg?style=flat-square)](https://packagist.org/packages/nekhbet/admetsar-service)
+[![Total Downloads](https://img.shields.io/packagist/dt/nekhbet/admetsar-service.svg?style=flat-square)](https://packagist.org/packages/nekhbet/admetsar-service)
 
-Lets you take (and filter) the predicted targets based on a SMILES code from Super-PRED website (https://prediction.charite.de/subpages/target_prediction.php).
+Lets you retrieve ADMET properties for a chemical compound (defined by its SMILES code) via admetSAR v2 Service (http://lmmd.ecust.edu.cn/admetsar2/).
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require nekhbet/superpred-targetprediction
+composer require nekhbet/admetsar-service
 ```
 
-## Usage
+## Usage (also see examples/simple.php)
 
 ```php
-$api = new SuperPREDTargetPrediction();
-$data = $api
+$api = new admetSAR();
+$id_job = $api
     ->setSMILESCode('Cc1cc(O)c2C(=O)c3c(O)cc(O)c4c3c3c2c1c1c2c3c3c4c(O)cc(O)c3C(=O)c2c(O)cc1C')
-    ->getTargets(min_probability: 80, min_model_accuracy: 96);
+    ->submitJob();
+print_r($api->parseJobResults($id_job));
 ```
 
 ```txt
 Output example: 
 ...
- [12] => Array
-    (
-        [target_name] => Thyroid hormone receptor alpha
-        [id_chembl] => CHEMBL1860
-        [id_uniprot] => P10827
-        [id_pdb] => 3ILZ
-        [id_tdd] => T79591
-        [probability] => 81.71
-        [model_accuracy] => 99.15
-    )
+ 
 ...
 ```
 

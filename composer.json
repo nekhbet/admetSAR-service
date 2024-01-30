@@ -1,0 +1,50 @@
+{
+    "name": "nekhbet/admetsar-service",
+    "description": "Lets you retrieve ADMET properties for a chemical compound (defined by its SMILES code) via admetSAR v2 Service",
+    "keywords": [
+        "nekhbet",
+        "admetSAR",
+        "ADMET properties",
+        "cheminformatics",
+        "bioinformatics",
+        "PHP",
+        "Sorin Trimbitas"
+    ],
+    "homepage": "https://github.com/nekhbet/admetsar-service",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sorin Trimbitas",
+            "email": "trimbitassorin@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.8",
+        "ext-dom": "*",
+        "ext-libxml": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nekhbet\\admetSARService\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nekhbet\\admetSARService\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
