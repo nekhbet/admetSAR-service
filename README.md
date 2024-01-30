@@ -5,6 +5,12 @@
 
 Lets you retrieve ADMET properties for a chemical compound (defined by its SMILES code) via admetSAR v2 Service (http://lmmd.ecust.edu.cn/admetsar2/).
 
+## Story of creating this package (with comments, full content)
+
+Part 1: https://youtu.be/L-L7P9YcRf8
+Part 2: https://youtu.be/RRhEbgwFIlg
+
+
 ## Installation
 
 You can install the package via composer:
