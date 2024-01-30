@@ -8,7 +8,9 @@ Lets you retrieve ADMET properties for a chemical compound (defined by its SMILE
 ## Story of creating this package (with comments, full content)
 
 Part 1: https://youtu.be/L-L7P9YcRf8
+
 Part 2: https://youtu.be/RRhEbgwFIlg
+
 
 
 ## Installation
