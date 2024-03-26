@@ -36,9 +36,15 @@ class admetSAR
         return $this;
     }
 
+    /**
+     * @throws admetSARException
+     */
     public function setSMILESCode(string $SMILES): admetSAR
     {
         $this->SMILES_code = $SMILES;
+        if (strlen($SMILES) < 8) {
+            throw new admetSARException("SMILES too short");
+        }
 
         return $this;
     }
